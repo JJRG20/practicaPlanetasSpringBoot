@@ -24,12 +24,12 @@ public class SecurityConfig {
                 // públicos
                 .requestMatchers("/public/**").permitAll()
 
-                // GET: admin y astro
+                // GET: admin y astro (En mayúsculas para Spring)
                 .requestMatchers(HttpMethod.GET, "/**")
-                .hasAnyRole("admin", "astro")
+                .hasAnyRole("ADMIN", "ASTRO")
 
                 // POST, PUT, DELETE: solo admin
-                .anyRequest().hasRole("admin")
+                .anyRequest().hasRole("ADMIN")
             )
 
             // OAuth2 Resource Server (JWT)
