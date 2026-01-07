@@ -9,5 +9,9 @@ import java.util.Optional;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 
+    // Para login
     Optional<User> findByUsername(String username);
+
+    // Útil para validación al crear usuarios
+    boolean existsByUsername(String username);
 }
