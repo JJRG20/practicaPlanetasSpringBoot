@@ -44,7 +44,7 @@ public class Planeta {
     @Column(name = "deletedAt")
     private LocalDateTime deletedAt;
     
-    @OneToMany(mappedBy = "Planeta", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "planeta", cascade = CascadeType.ALL)
     @JsonManagedReference
     private List<Luna> lunas;
     
