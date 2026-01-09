@@ -23,11 +23,21 @@ public class AuthController {
     @PostMapping("/login")
     public ResponseEntity<LoginResponse> login(@Valid @RequestBody LoginRequest request) {
         try {
+            System.out.println("=== DEBUG LOGIN ATTEMPT ===");
+            System.out.println("Username: " + request.getUsername());
+            System.out.println("Password length: " + request.getPassword().length());
+            
             LoginResponse response = authService.login(request);
             return ResponseEntity.ok(response);
         } catch (Exception e) {
+            // IMPORTANTE: Imprime el error completo
+            System.err.println("=== LOGIN ERROR ===");
+            System.err.println("Error type: " + e.getClass().getName());
+            System.err.println("Error message: " + e.getMessage());
+            e.printStackTrace();
+            
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
-                    .body(new LoginResponse(null, null, null, "Invalid credentials"));
+                    .body(new LoginResponse(null, null, null, "Error: " + e.getMessage()));
         }
     }
     
