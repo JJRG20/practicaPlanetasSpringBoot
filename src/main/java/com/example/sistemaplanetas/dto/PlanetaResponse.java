@@ -15,7 +15,7 @@ public class PlanetaResponse {
     private String name;
     private Double diameter;
     private Double weight;
-    private Double sunDist;
+    private Double sun;
     private Double time;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
