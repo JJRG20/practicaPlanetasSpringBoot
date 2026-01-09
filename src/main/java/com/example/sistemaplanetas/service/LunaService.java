@@ -24,8 +24,8 @@ public class LunaService {
     @Autowired
     private PlanetaRepository planetaRepository;
     
-    // Para clients: solo lunas no eliminadas
-    public List<LunaResponse> getAllLunasForClient() {
+    // Para astros: solo lunas no eliminadas
+    public List<LunaResponse> getAllLunasForAstro() {
         return lunaRepository.findByDeletedAtIsNull().stream()
                 .map(this::convertToResponse)
                 .collect(Collectors.toList());
@@ -38,7 +38,7 @@ public class LunaService {
                 .collect(Collectors.toList());
     }
     
-    public LunaResponse getLunaByIdForClient(Integer idLuna) {
+    public LunaResponse getLunaByIdForAstro(Integer idLuna) {
         Luna luna = lunaRepository.findByIdLunaAndDeletedAtIsNull(idLuna)
                 .orElseThrow(() -> new RuntimeException("Luna not found or deleted"));
         return convertToResponse(luna);
