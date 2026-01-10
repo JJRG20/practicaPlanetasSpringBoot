@@ -29,7 +29,7 @@ public class Planeta {
     @Column(nullable = false)
     private Double weight;
 
-    @Column(name = "sun_dist", nullable = false)
+    @Column(name = "sunDist", nullable = false)
     private Double sunDist;
 
     @Column(nullable = false)
