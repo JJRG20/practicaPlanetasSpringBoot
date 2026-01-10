@@ -35,13 +35,13 @@ public class Planeta {
     @Column(nullable = false)
     private Double time;
     
-    @Column(name = "createdAt")
+
     private LocalDateTime createdAt;
     
-    @Column(name = "updatedAt")
+
     private LocalDateTime updatedAt;
     
-    @Column(name = "deletedAt")
+
     private LocalDateTime deletedAt;
     
     @OneToMany(mappedBy = "planeta", cascade = CascadeType.ALL)

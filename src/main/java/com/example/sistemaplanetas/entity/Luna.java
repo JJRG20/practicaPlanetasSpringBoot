@@ -33,13 +33,13 @@ public class Luna {
     @JsonBackReference
     private Planeta planeta;
     
-    @Column(name = "createdAt")
+
     private LocalDateTime createdAt;
     
-    @Column(name = "updatedAt")
+
     private LocalDateTime updatedAt;
     
-    @Column(name = "deletedAt")
+
     private LocalDateTime deletedAt;
     
     @PrePersist
