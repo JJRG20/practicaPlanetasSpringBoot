@@ -25,7 +25,7 @@ public class PlanetaRequest {
 
     @NotNull(message = "Sun distance is required")
     @Positive(message = "Sun distance must be positive")
-    private Double sun;
+    private Double sunDist;
 
     @NotNull(message = "Time is required")
     @Positive(message = "Time must be positive")

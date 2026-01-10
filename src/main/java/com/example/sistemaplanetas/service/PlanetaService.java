@@ -56,7 +56,7 @@ public class PlanetaService {
         planeta.setName(request.getName());
         planeta.setDiameter(request.getDiameter());
         planeta.setWeight(request.getWeight());
-        planeta.setSun(request.getSun());
+        planeta.setSunDist(request.getSunDist());
         planeta.setTime(request.getTime());
         
         Planeta savedPlaneta = planetaRepository.save(planeta);
@@ -70,7 +70,7 @@ public class PlanetaService {
         planeta.setName(request.getName());
         planeta.setDiameter(request.getDiameter());
         planeta.setWeight(request.getWeight());
-        planeta.setSun(request.getSun());
+        planeta.setSunDist(request.getSunDist());
         planeta.setTime(request.getTime());
         
         Planeta updatedPlaneta = planetaRepository.save(planeta);
@@ -153,7 +153,7 @@ public class PlanetaService {
         response.setName(planeta.getName());
         response.setDiameter(planeta.getDiameter());
         response.setWeight(planeta.getWeight());
-        response.setSun(planeta.getSun());
+        response.setSunDist(planeta.getSunDist());
         response.setTime(planeta.getTime());
         response.setCreatedAt(planeta.getCreatedAt());
         response.setUpdatedAt(planeta.getUpdatedAt());
