@@ -117,14 +117,26 @@ public class PlanetaService {
         List<Planeta> planetas;
         
         if (isAdmin) {
-            planetas = planetaRepository.findByDiameterRangeIncludingDeleted(
+            planetas = planetaRepository.findByRangeIncludingDeleted(
                 request.getMinDiameter(), 
-                request.getMaxDiameter()
+                request.getMaxDiameter(),
+                request.getMinWeight(), 
+                request.getMaxWeight(),
+                request.getMinSunDist(), 
+                request.getMaxSunDist(),
+                request.getMinTime(), 
+                request.getMaxTime()
             );
         } else {
-            planetas = planetaRepository.findByDiameterRange(
+            planetas = planetaRepository.findByRange(
                 request.getMinDiameter(), 
-                request.getMaxDiameter()
+                request.getMaxDiameter(),
+                request.getMinWeight(), 
+                request.getMaxWeight(),
+                request.getMinSunDist(), 
+                request.getMaxSunDist(),
+                request.getMinTime(), 
+                request.getMaxTime()
             );
         }
         

@@ -11,6 +11,12 @@ public class PlanetaReportRequest {
     
     private Double minDiameter;
     private Double maxDiameter;
+    private Double minWeight;
+    private Double maxWeight;
+    private Double minSunDist;
+    private Double maxSunDist;
+    private Double minTime;
+    private Double maxTime;
     private Integer minLunas;
     private Integer maxLunas;
 }

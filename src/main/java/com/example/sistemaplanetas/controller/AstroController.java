@@ -49,10 +49,24 @@ public class AstroController {
     public ResponseEntity<List<PlanetaResponse>> generatePlanetaReport(
             @RequestParam(required = false) Double minDiameter,
             @RequestParam(required = false) Double maxDiameter,
+            @RequestParam(required = false) Double minWeight,
+            @RequestParam(required = false) Double maxWeight,
+            @RequestParam(required = false) Double minSunDist,
+            @RequestParam(required = false) Double maxSunDist,
+            @RequestParam(required = false) Double minTime,
+            @RequestParam(required = false) Double maxTime,
             @RequestParam(required = false) Integer minLunas,
             @RequestParam(required = false) Integer maxLunas) {
         try {
-            PlanetaReportRequest request = new PlanetaReportRequest(minDiameter, maxDiameter, minLunas, maxLunas);
+            PlanetaReportRequest request = new PlanetaReportRequest(minDiameter, 
+                                                                    maxDiameter, 
+                                                                    minWeight,
+                                                                    maxWeight,
+                                                                    minSunDist,
+                                                                    maxSunDist,
+                                                                    minTime,
+                                                                    maxTime,
+                                                                    minLunas, maxLunas);
             List<PlanetaResponse> planetas = planetaService.generateReport(request, false);
             return ResponseEntity.ok(planetas);
         } catch (Exception e) {
