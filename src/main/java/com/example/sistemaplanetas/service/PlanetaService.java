@@ -189,7 +189,7 @@ public class PlanetaService {
         response.setDiameter(luna.getDiameter());
         response.setWeight(luna.getWeight());
         response.setIdPlanet(luna.getPlaneta().getIdPlanet());
-        response.setPlanetaName(luna.getPlaneta().getName());
+        //response.setPlanetaName(luna.getPlaneta().getName());
         response.setCreatedAt(luna.getCreatedAt());
         response.setUpdatedAt(luna.getUpdatedAt());
         response.setDeletedAt(luna.getDeletedAt());

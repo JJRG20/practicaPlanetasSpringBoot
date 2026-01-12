@@ -15,7 +15,7 @@ public class LunaResponse {
     private Double diameter;
     private Double weight;
     private Integer idPlanet;
-    private String planetaName;
+    //private String planetaName;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
     private LocalDateTime deletedAt;
